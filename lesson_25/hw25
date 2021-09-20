@@ -38,3 +38,19 @@ def reverse(input_str: str) -> str:
 print(reverse("read this text reverse"))
 print(reverse("hello"))
 print(reverse("0"))
+
+
+#T5
+
+def sum_of_digits(digit_string: str) -> int:
+    if not digit_string.isdigit():
+        raise ValueError("Input string must be digit string")
+
+    if len(digit_string) == 1:
+        return int(digit_string[0])
+    return int(digit_string[-1]) + sum_of_digits(digit_string[:-1])
+
+print(sum_of_digits('2626'))
+print(sum_of_digits('test'))
+
+
