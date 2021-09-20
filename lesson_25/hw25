@@ -27,3 +27,14 @@ def mult(a: int, n: int) -> int:
 
 print(mult(5, 4))
 print(mult(-5, 4))
+
+
+#T4
+
+def reverse(input_str: str) -> str:
+  return input_str[::-1]
+
+
+print(reverse("read this text reverse"))
+print(reverse("hello"))
+print(reverse("0"))
