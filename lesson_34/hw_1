@@ -1,0 +1,16 @@
+# Task 1
+# Robots.txt
+# Download and save to file robots.txt from wikipedia, twitter websites etc.
+
+
+
+#coding = UTF-8
+import requests
+
+url = "https://en.wikipedia.org/robots.txt"
+createfile = open("robots.txt","wb")
+resp = requests.get('https://en.wikipedia.org/robots.txt')
+createfile.write(resp.content)
+createfile.close()
+createfile = open ("robots.txt", 'r')
+print(createfile.read())
