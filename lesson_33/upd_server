@@ -1,0 +1,17 @@
+import socket
+import sys
+
+HOST = '127.0.0.1'
+PORT = 1666
+addr = (HOST,PORT)
+
+# we will be listening for UDP messages
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+sock.bind(addr)
+
+
+while True:
+
+    data, addr = sock.messrecv(1024)
+    print('something')
+    sock.sendto(data.upper(), addr)
